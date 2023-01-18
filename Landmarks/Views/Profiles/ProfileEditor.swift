@@ -36,8 +36,10 @@ struct ProfileEditor: View {
                 }
                 .pickerStyle(.segmented)
             }
-            DatePicker(<#LocalizedStringKey#>, selection: $profile.goalDate, in: dateRange, displayedComponents: .date)
-            Text("Goal date").bold()
+            DatePicker(selection: $profile.goalDate, in: dateRange,  displayedComponents: .date) {
+                Text("Goal date").bold()
+            }
+
         }
     }
 }
